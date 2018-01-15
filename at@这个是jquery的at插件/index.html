@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="x-ua-compatible" charset="UTF-8" content="IE=Edge"/>
+  <title>At.js</title>
+  <link rel="stylesheet" href="dist/css/jquery.atwho.css" />
+  <script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.caret.js"></script>
+  <script type="text/javascript" src="dist/js/jquery.atwho.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    var jeremy = decodeURI("J%C3%A9r%C3%A9my") // Jérémy
+    var names = ["Jacob","Isabella","Ethan","Emma","Michael","Olivia","Alexander","Sophia","William","Ava","Joshua","Emily","Daniel","Madison","Jayden","Abigail","Noah","Chloe","你好","你你你", jeremy, "가"];
+    var names = $.map(names,function(value,i) {
+      return {'id':i,'name':value,'email':value+"@email.com"};
+    });
+    var at_config = {
+      at: "@",
+      data: names,
+      headerTpl: '<div class="atwho-header">用户名</small></div>',
+      insertTpl: '@'+'${name}',
+      displayTpl: "<li style='color:#00f;'>${name} <small>${email}</small></li>",
+      limit: 200
+    }
+    $inputor = $('#inputor').atwho(at_config)
+  });
+  </script>
+
+
+</head>
+
+  <style type="text/css">
+    .wrapper {
+      width: 750px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    .inputor {
+      height: 160px;
+      width: 90%;
+      border: 1px solid #dadada;
+      border-radius: 4px;
+      padding: 5px 8px;
+      outline: 0 none;
+      margin: 10px 0;
+      background: white;
+      font-size: inherit;
+      overflow-y: scroll;
+    }
+    .inputor:focus {
+      border: 1px solid rgb(6, 150, 247);
+    }
+
+  </style>
+<body>
+      <div>
+        <textarea id="inputor" class="inputor"></textarea>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	body{
+
+	}
+	#atText{
+		position:absolute;
+		width:800px;
+		height:200px;
+		top:0px;
+		left:0px;
+		font: 400 11px Arial;
+	}
+	.textbox{
+		position:absolute;
+		border:1px solid #000;
+		width:100px;
+		height:300px;
+		background: #fff;
+		display:none;
+	}
+	#positionTheText{
+		font-family: monospace;
+		position:absolute;
+		width:800px;
+		height:200px;
+		padding: 2px;
+		top:0px;
+		left: 0px;
+		font: 400 12px Arial;
+		z-index:-999;
+	}
+	.isSelectCite{
+		color:#00f;
+	}
+</style>
+<body>
+	<textarea id="atText" onkeyup='watchAt.judgeIsAt(this)'></textarea>
+	<div id="positionTheText" ></div>
+	<div class="textbox">
+		<ul>
+			<li>点击测试1</li>
+			<li>点击测试2</li>
+			<li>点击测试3</li>
+			<li>点击测试4</li>
+			<li>点击测试5</li>
+		</ul>
+	</div>
+</body>
+	<script type="text/javascript" src="./jquery.js"></script>
+	<script type="text/javascript" src="./at.js"></script>
+</html>
